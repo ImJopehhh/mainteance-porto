@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sedang Maintenance</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS RESET & VARIABEL --- */
+        :root {
+            --bg-color: #0f0f11;
+            --text-main: #ffffff;
+            --text-sub: #a1a1aa;
+            --accent-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Latar belakang visual halus (Glow effect) */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(220, 39, 67, 0.15) 0%, rgba(15, 15, 17, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        /* --- KONTAINER UTAMA --- */
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* --- TOMBOL INSTAGRAM --- */
+        .btn-instagram {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            background: var(--accent-gradient);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(220, 39, 67, 0.5);
+        }
+
+        .btn-instagram svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            fill: white;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            position: absolute;
+            bottom: 30px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            opacity: 0.6;
+        }
+
+        /* --- ANIMASI --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- RESPONSIVE MOBILE --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            p { font-size: 1rem; }
+            .btn-instagram { width: 100%; max-width: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Website Sedang<br>Dalam Maintenance</h1>
+        
+        <p>Kami sedang melakukan peningkatan sistem untuk memberikan pengalaman yang lebih baik. Silakan kunjungi media sosial kami untuk update terbaru.</p>
+        
+        <a href="https://www.instagram.com/imjopeh?igsh=ejJiYXFtdzFiY3Ay" target="_blank" class="btn-instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            Follow Instagram
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2025 ImJopehDev
+    </footer>
+
+</body>
+</html>
